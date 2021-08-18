@@ -1,0 +1,42 @@
+.conditions {
+    margin-bottom: 30px;
+
+    &__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        cursor: pointer;
+        line-height: 1.71;
+        color: var(--logo-icon-header);
+    }
+    
+    &__label a {
+        margin-left: 3px;
+    }
+}
+
+.conditions__checkbox {
+    display: flex;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  
+    border: 2px solid var(--checkbox-color);
+    border-radius: 4px;
+
+    transition: fill var(--transition-type), border-color var(--transition-type);
+    fill: transparent;
+  
+    .conditions__input:checked + & {
+        border-color: var(--brand-color);
+        fill: var(--light-background);
+        background-color: var(--brand-color);
+    }
+    
+    .conditions__input:hover + &,
+    .conditions__input:focus + & {
+        border-color: var(--brand-color);
+    }
+}
