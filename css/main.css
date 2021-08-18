@@ -506,7 +506,7 @@ footer .logo {
   background-color: var(--dark-background);
 }
 
-.footer-container {
+.footer__container {
   margin: 0 auto;
   padding: 0 15px;
   width: 1200px;
