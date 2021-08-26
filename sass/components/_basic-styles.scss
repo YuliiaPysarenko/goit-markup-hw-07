@@ -9,11 +9,11 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
-    padding: 0;
 }
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 img {
@@ -30,15 +30,19 @@ a {
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
+}
 
-    &__title {
-        margin-bottom: 50px;
-    
-        font-weight: var(--font-weight-bold);
-        font-size: 36px;
-        line-height: 1.2;
-        text-align: center;
-        color: var(--section-text);
+.section__title {
+    margin-bottom: 50px;
+
+    font-weight: var(--font-weight-bold);
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--section-text);
+
+    &--visually-hidden {
+        @extend %visually-hidden;
     }
 }
 
@@ -46,15 +50,15 @@ a {
     margin: 0 auto;
     padding: 0 15px;
     width: 1200px;
-}
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    clip: rect(0 0 0 0);
+    &--flex {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &--flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }

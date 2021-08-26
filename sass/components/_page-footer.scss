@@ -1,20 +1,12 @@
 .footer {
     padding: 60px 0;
     background-color: var(--dark-background);
-
-    &__container {
-        margin: 0 auto;
-        padding: 0 15px;
-        width: 1200px;
-        display: flex;
-        align-items: baseline;
-    }
 }
 
 .join-us {
     margin-left: 70px;
+}
 
-    &__title {
-        @extend %footer__title;
-    }
+.join-us__title {
+    @extend %footer__title;
 }

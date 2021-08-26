@@ -7,16 +7,12 @@
     background-color: rgba(0, 0, 0, 0.2);
 
     opacity: 1;
-    transition: opacity var(--transition-type);  
+    transition: opacity var(--transition-type);
 
     &.is-hidden {
         opacity: 0;
         pointer-events: none;
     }
-    
-    &.is-hidden .modal {
-        transform: translate(-50%, -50%) scale(0.8);
-    }  
 }
 
 .modal {
@@ -33,6 +29,10 @@
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--transition-type); 
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
 }
 
 .modal__close-button {
@@ -51,13 +51,13 @@
     box-sizing: border-box;
     border-radius: 50%;
     cursor: pointer;
+}
 
-    & > .icon {
-        transition: fill var(--transition-type);
-    }
-    
-    & > .icon:hover, 
-    & > .icon:focus {
+.modal__close-icon {
+    transition: fill var(--transition-type);
+
+    &:hover, 
+    &:focus {
         fill: var(--brand-color);
     }
 }

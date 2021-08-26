@@ -1,16 +1,16 @@
 .social-media {
     display: flex;
     justify-content: center;
+}
 
-    &__item:not(:last-child) {
+.social-media__item {
+    display: block;
+    color: var(--section-text);
+    text-decoration: none;
+    padding: 0;
+
+    &:not(:last-child) {
         margin-right: 10px;
-    }
-    
-    &__item {
-        display: block;
-        color: var(--section-text);
-        text-decoration: none;
-        padding: 0;
     }
 }
 
@@ -25,30 +25,29 @@
     &:focus {
         background-color: var(--brand-color);
     }
+}
     
-    & .icon {
-        fill: var(--logo-icon-social);
-    
-        transition: fill var(--transition-type);
-    }
-    
-    &:hover .icon,
-    &:focus .icon {
+.social-media__icon {
+    fill: var(--logo-icon-social);
+    transition: fill var(--transition-type);
+
+    .social-media__link:hover &,
+    .social-media__link:focus & {
         fill: var(--light-background);
     }
+}
 
-    .footer & {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        transition: background-color var(--transition-type);
-    }
+.footer .social-media__link {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background-color var(--transition-type);
     
-    .footer &:hover,
-    .footer &:focus {
+    &:hover,
+    &:focus {
         background-color: var(--brand-color);
     }
+}
     
-    .footer & > .icon {
-        fill: var(--main-text);
-    }
+.footer .social-media__icon {
+    fill: var(--main-text);
 }

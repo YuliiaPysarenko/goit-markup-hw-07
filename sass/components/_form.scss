@@ -11,19 +11,6 @@
     color: var(--section-text);
 }
 
-.form__field {
-    position: relative;
-    margin-bottom: 10px;
-
-    & > .icon {
-        position: absolute;
-        left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: fill var(--transition-type);
-    }
-}
-
 .form__label {
     display: flex;
     flex-direction: column;
@@ -33,6 +20,11 @@
     line-height: 1.16;
     letter-spacing: 0.01em;
     color: var(--logo-icon-header);
+}
+
+.form__field {
+    position: relative;
+    margin-bottom: 10px;
 }
 
 .form__input {
@@ -52,9 +44,17 @@
         border-color: var(--brand-color);
         outline: var(--brand-color);
     }
+}
+
+.form__icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill var(--transition-type);
     
-    &:hover + .icon,
-    &:focus + .icon {
+    .form__input:hover + &,
+    .form__input:focus + & {
         fill: var(--brand-color);
     }
 }

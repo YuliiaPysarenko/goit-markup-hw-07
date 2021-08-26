@@ -3,21 +3,17 @@
     font-style: normal;
 }
 
-.contacts {
-    margin: 0;
+.address__item {
+    margin-bottom: 9px;
+    line-height: 1.71;
+    color: var(--main-text);
 
-    &__item {
-        margin-bottom: 9px;
-        line-height: 1.71;
-        color: var(--main-text);
-    }
-    
-    &__item:last-child {
+    &:last-child {
         margin-bottom: 0;    
     }
 }
     
-.contacts__link {
+.address__link {
     color: var(--address-link);
     text-decoration: none;
     transition: color var(--transition-type);

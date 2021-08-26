@@ -1,17 +1,17 @@
 .conditions {
     margin-bottom: 30px;
+}
 
-    &__label {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        cursor: pointer;
-        line-height: 1.71;
-        color: var(--logo-icon-header);
-    }
+.conditions__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
-    &__label a {
+    cursor: pointer;
+    line-height: 1.71;
+    color: var(--logo-icon-header);
+
+    & a {
         margin-left: 3px;
     }
 }
@@ -39,4 +39,8 @@
     .conditions__input:focus + & {
         border-color: var(--brand-color);
     }
+}
+
+.conditions__input--visually-hidden {
+    @extend %visually-hidden;
 }
